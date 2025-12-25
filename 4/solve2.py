@@ -1,11 +1,9 @@
-# garek brute force
 def check(x, y, n, m, grid):
     cnt = 0
     for i in range(max(y - 1, 0), min(y + 2, n)):
         for j in range(max(x - 1, 0), min(x + 2, m)):
             if (i, j) != (y, x) and grid[i][j] == "@":
                 cnt += 1
-            # print(cnt, grid[i][j], i, j)
             if cnt > 3:
                 return False
     return True
